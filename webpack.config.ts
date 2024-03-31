@@ -16,7 +16,7 @@ export default (env: Partial<EnvVariables>) => {
   const paths: BuildOptions['paths'] = {
     html: path.resolve(__dirname, 'public', 'index.html'),
     public: path.resolve(__dirname, 'public'),
-    output: path.resolve(__dirname, 'build'),
+    output: path.resolve(__dirname, 'dist'),
     entry: path.resolve(__dirname, 'src', 'index.tsx'),
     src: path.resolve(__dirname, 'src')
   }
