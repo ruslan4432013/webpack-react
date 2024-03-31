@@ -1,4 +1,5 @@
 # Проект с настройкой Webpack для React (Module Federation)
+- Пример с простым SPA приложением в ветке react-spa-config
 
 Этот проект содержит конфигурацию Webpack с использованием следующих плагинов и лоадеров:
 
@@ -20,7 +21,7 @@
 - ***css-loader:*** Загружает CSS-файлы и разрешает им импортировать другие CSS-файлы и ресурсы, такие как изображения и
   шрифты.
 - ***sass-loader:*** Трансформирует SASS/SCSS в CSS.
-- ***style-loader:*** Вставляет CSS в DOM через тег <style>.
+- ***style-loader:*** Вставляет CSS в DOM через тег `<style>`.
 - ***ts-loader:*** Транспилирует TypeScript в JavaScript.
 - ***fork-ts-checker-webpack-plugin:*** Позволяет запускать TypeScript type checking в отдельном процессе для ускорения
   сборки.
