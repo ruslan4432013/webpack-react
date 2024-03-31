@@ -1,32 +1,21 @@
 {
-  "name": "webpack-playground",
+  "name": "shop",
   "version": "1.0.0",
-  "description": "",
   "scripts": {
-    "build:shop": "npm run build:prod -w shop",
-    "build:admin": "npm run build:prod -w admin",
-    "build:host": "npm run build:prod -w host",
-    "build": "concurrently \"npm:build:*\"",
-
-    "start:shop": "npm start -w shop",
-    "start:admin": "npm start -w admin",
-    "start:host": "npm start -w host",
-    "start": "concurrently \"npm:start:*\"",
-
-    "lint:types:shop": "npm run lint:types -w shop",
-    "lint:types:admin": "npm run lint:types -w admin",
-    "lint:types:host": "npm run lint:types -w host",
-    "lint:types:build-config": "npm run lint:types -w @packages/build-config",
-    "lint:types:shared": "npm run lint:types -w @packages/shared",
-    "lint:types": "concurrently \"npm:lint:types:*\""
+    "start": "webpack serve --env mode=development",
+    "build:dev": "webpack --env mode=development",
+    "build:prod": "webpack --env mode=production",
+    "build:mobile": "webpack --env platform=mobile",
+    "build:desktop": "webpack --env platform=desktop",
+    "lint:types": "tsc --skipLibCheck --noEmit --project tsconfig.json"
   },
-  "workspaces": [
-    "packages/*",
-    "services/*"
-  ],
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "@packages/shared": "*",
+    "@packages/build-config": "*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3"
+  },
   "devDependencies": {
     "@babel/core": "^7.24.3",
     "@babel/plugin-transform-react-jsx": "^7.23.4",
@@ -40,8 +29,8 @@
     "@types/react-dom": "^18.2.23",
     "@types/webpack": "^5.28.5",
     "@types/webpack-bundle-analyzer": "^4.7.0",
+    "@types/webpack-dev-server": "^4.7.2",
     "babel-loader": "^9.1.3",
-    "concurrently": "^8.2.2",
     "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^6.10.0",
     "fork-ts-checker-webpack-plugin": "^9.0.2",
@@ -59,11 +48,5 @@
     "webpack-bundle-analyzer": "^4.10.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4"
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.3",
-    "shop": "^1.0.0"
   }
 }
