@@ -25,3 +25,14 @@ declare module '*.jpeg' {
 
 declare const __PLATFORM__: 'desktop' | 'mobile'
 declare const __ENV__: 'production' | 'development'
+
+declare module "shop/router" {
+  import { RouteObject } from "react-router-dom";
+  const content: RouteObject[]
+  export default content
+}
+declare module "admin/router" {
+  import { RouteObject } from "react-router-dom";
+  const content: RouteObject[]
+  export default content
+}

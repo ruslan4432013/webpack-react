@@ -6,7 +6,8 @@
     "build:dev": "webpack --env mode=development",
     "build:prod": "webpack --env mode=production",
     "build:mobile": "webpack --env platform=mobile",
-    "build:desktop": "webpack --env platform=desktop"
+    "build:desktop": "webpack --env platform=desktop",
+    "lint:types": "tsc --skipLibCheck --noEmit --project tsconfig.json"
   },
   "dependencies": {
     "@packages/shared": "*",

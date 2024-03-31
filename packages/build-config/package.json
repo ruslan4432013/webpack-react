@@ -2,6 +2,9 @@
   "name": "@packages/build-config",
   "version": "1.0.0",
   "main": "./src/index.ts",
+  "scripts": {
+    "lint:types": "tsc --skipLibCheck --noEmit --project tsconfig.json"
+  },
   "devDependencies": {
     "@babel/core": "^7.24.3",
     "@babel/plugin-transform-react-jsx": "^7.23.4",
