@@ -41,7 +41,13 @@
 git clone https://github.com/ruslan4432013/webpack-react.git
 ```
 
-2. Установите зависимости
+2. Перейдите в проект
+
+```shell
+cd webpack-react
+```
+
+3. Установите зависимости
 
 ```shell
 npm install
